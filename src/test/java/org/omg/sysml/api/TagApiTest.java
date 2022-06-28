@@ -100,7 +100,7 @@ public class TagApiTest {
     public void postTagByProjectTest() throws ApiException {
         UUID projectId = null;
         Tag body = null;
-        Branch response = api.postTagByProject(projectId, body);
+        Tag response = api.postTagByProject(projectId, body);
 
         // TODO: test validations
     }

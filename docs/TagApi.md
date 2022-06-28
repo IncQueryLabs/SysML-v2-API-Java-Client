@@ -214,7 +214,7 @@ No authorization required
 
 <a name="postTagByProject"></a>
 # **postTagByProject**
-> Branch postTagByProject(projectId, body)
+> Tag postTagByProject(projectId, body)
 
 Create tag by project
 
@@ -236,7 +236,7 @@ public class Example {
     UUID projectId = new UUID(); // UUID | ID of the project
     Tag body = new Tag(); // Tag | 
     try {
-      Branch result = apiInstance.postTagByProject(projectId, body);
+      Tag result = apiInstance.postTagByProject(projectId, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling TagApi#postTagByProject");

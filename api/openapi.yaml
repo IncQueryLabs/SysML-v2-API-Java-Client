@@ -588,10 +588,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Branch'
+                $ref: '#/components/schemas/Tag'
             application/ld+json:
               schema:
-                $ref: '#/components/schemas/Branch'
+                $ref: '#/components/schemas/Tag'
           description: Created
         "415":
           content:

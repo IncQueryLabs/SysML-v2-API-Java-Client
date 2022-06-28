@@ -27,7 +27,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.omg.sysml.model.Branch;
 import org.omg.sysml.model.Error;
 import org.omg.sysml.model.Tag;
 import java.util.UUID;
@@ -552,7 +551,7 @@ public class TagApi {
      * 
      * @param projectId ID of the project (required)
      * @param body  (required)
-     * @return Branch
+     * @return Tag
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -563,8 +562,8 @@ public class TagApi {
         <tr><td> 0 </td><td> Unexpected response. </td><td>  -  </td></tr>
      </table>
      */
-    public Branch postTagByProject(UUID projectId, Tag body) throws ApiException {
-        ApiResponse<Branch> localVarResp = postTagByProjectWithHttpInfo(projectId, body);
+    public Tag postTagByProject(UUID projectId, Tag body) throws ApiException {
+        ApiResponse<Tag> localVarResp = postTagByProjectWithHttpInfo(projectId, body);
         return localVarResp.getData();
     }
 
@@ -573,7 +572,7 @@ public class TagApi {
      * 
      * @param projectId ID of the project (required)
      * @param body  (required)
-     * @return ApiResponse&lt;Branch&gt;
+     * @return ApiResponse&lt;Tag&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -584,9 +583,9 @@ public class TagApi {
         <tr><td> 0 </td><td> Unexpected response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Branch> postTagByProjectWithHttpInfo(UUID projectId, Tag body) throws ApiException {
+    public ApiResponse<Tag> postTagByProjectWithHttpInfo(UUID projectId, Tag body) throws ApiException {
         okhttp3.Call localVarCall = postTagByProjectValidateBeforeCall(projectId, body, null);
-        Type localVarReturnType = new TypeToken<Branch>(){}.getType();
+        Type localVarReturnType = new TypeToken<Tag>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -607,10 +606,10 @@ public class TagApi {
         <tr><td> 0 </td><td> Unexpected response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call postTagByProjectAsync(UUID projectId, Tag body, final ApiCallback<Branch> _callback) throws ApiException {
+    public okhttp3.Call postTagByProjectAsync(UUID projectId, Tag body, final ApiCallback<Tag> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = postTagByProjectValidateBeforeCall(projectId, body, _callback);
-        Type localVarReturnType = new TypeToken<Branch>(){}.getType();
+        Type localVarReturnType = new TypeToken<Tag>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
